@@ -21,7 +21,7 @@ Mac = ""
 APARELHO1 = ""
 
 If CAIXA_CHAPA = "" Then
-    MsgBox "    É necessario informar uma chapa!"
+    MsgBox "    ï¿½ necessario informar uma chapa!"
     GoTo fim
 End If
  
@@ -47,7 +47,7 @@ If IMEI & Mac & APARELHO1 = "" Then GoTo Mensagem
                     IMEI = ""
                     Mac = ""
                     APARELHO1 = ""
-                    MsgBox " Este smartphone já foi Baixado, não é mais possivel usar-lo!!! "
+                    MsgBox " Este smartphone jï¿½ foi Baixado, nï¿½o ï¿½ mais possivel usar-lo!!! "
             End If
          Next
     End If
@@ -55,7 +55,7 @@ Next
 
 GoTo fim
 Mensagem:
-MsgBox "A chapa informada não é válida e/ou não existe. Tente novamente."
+MsgBox "A chapa informada nï¿½o ï¿½ vï¿½lida e/ou nï¿½o existe. Tente novamente."
 fim:
 
 End Sub
@@ -76,37 +76,36 @@ novo = CAIXA_NOVO.Value
 
 
 If CAIXA_CHAPA = "" Then
-    MsgBox "    É necessário informar uma chapa!"
+    MsgBox "    ï¿½ necessï¿½rio informar uma chapa!"
     Exit Sub
 ElseIf CAIXA_PROFISSIONAL = "" Then
-    MsgBox "    É necessário infomar o nome do profissional!"
+    MsgBox "    ï¿½ necessï¿½rio infomar o nome do profissional!"
     Exit Sub
 ElseIf MATRICULA = "" Then
-    MsgBox "    É necessário informar a matricula do profissional!"
+    MsgBox "    ï¿½ necessï¿½rio informar a matricula do profissional!"
     Exit Sub
 ElseIf FILIAL = "" Then
-    MsgBox "    É necessário informar uma filial para vinculo!"
+    MsgBox "    ï¿½ necessï¿½rio informar uma filial para vinculo!"
     Exit Sub
 ElseIf EMAIL = "" Then
-    MsgBox "    É necessário informar o e-mail do profissional!"
+    MsgBox "    ï¿½ necessï¿½rio informar o e-mail do profissional!"
     Exit Sub
 ElseIf SENHA = "" Then
-    MsgBox "    É necessário informar a senha do e-mail do profissional!"
+    MsgBox "    ï¿½ necessï¿½rio informar a senha do e-mail do profissional!"
     Exit Sub
 ElseIf APARELHO = "" Then
-    MsgBox "    É necessário informar o modelo do Smartphone!"
+    MsgBox "    ï¿½ necessï¿½rio informar o modelo do Smartphone!"
    Exit Sub
 ElseIf IMEI = "" Then
-    MsgBox "    É necessário informar o IMEI do Smartphone!"
+    MsgBox "    ï¿½ necessï¿½rio informar o IMEI do Smartphone!"
    Exit Sub
 ElseIf Mac = "" Then
-    MsgBox "    É necessário informar o MAC do Smartphone!"
+    MsgBox "    ï¿½ necessï¿½rio informar o MAC do Smartphone!"
    Exit Sub
 
 End If
 
-LINHA = Sheets("SMARTPHONES").Cells(1, 1).End(xlDown).Row + 1
-
+LINHA = Sheets("SMARTPHONES").Cells(1048476, 1).End(xlUp).Row + 1
 Sheets("SMARTPHONES").Cells(LINHA, 1).Value = CAIXA_PROFISSIONAL.Value
 Sheets("SMARTPHONES").Cells(LINHA, 2).Value = FILIAL.Value
 Sheets("SMARTPHONES").Cells(LINHA, 3).Value = CAIXA_CHAPA.Value
@@ -119,14 +118,14 @@ Sheets("SMARTPHONES").Cells(LINHA, 9).Value = Mac.Value
 Sheets("SMARTPHONES").Cells(LINHA, 10).Value = DATA.Value
 Sheets("SMARTPHONES").Cells(LINHA, 11).Value = APARELHO1.Value
 
-' Codigo que adiciona na tabela de mudanças para controle das despesas.
+' Codigo que adiciona na tabela de mudanï¿½as para controle das despesas.
 
-linha_tabeladespesa = Sheets("MUDANÇAS").Cells(1, 1).End(xlDown).Row + 1
-    Sheets("MUDANÇAS").Cells(linha_tabeladespesa, 1).Value = CAIXA_PROFISSIONAL.Value
-    Sheets("MUDANÇAS").Cells(linha_tabeladespesa, 2).Value = FILIAL.Value
-    Sheets("MUDANÇAS").Cells(linha_tabeladespesa, 3).Value = CAIXA_CHAPA.Value
-    Sheets("MUDANÇAS").Cells(linha_tabeladespesa, 5).Value = DATA.Value
-    Sheets("MUDANÇAS").Cells(linha_tabeladespesa, 4).Value = APARELHO1.Value
+linha_tabeladespesa = Sheets("MUDANï¿½AS").Cells(1048476, 1).End(xlUp).Row + 1
+    Sheets("MUDANï¿½AS").Cells(linha_tabeladespesa, 1).Value = CAIXA_PROFISSIONAL.Value
+    Sheets("MUDANï¿½AS").Cells(linha_tabeladespesa, 2).Value = FILIAL.Value
+    Sheets("MUDANï¿½AS").Cells(linha_tabeladespesa, 3).Value = CAIXA_CHAPA.Value
+    Sheets("MUDANï¿½AS").Cells(linha_tabeladespesa, 5).Value = DATA.Value
+    Sheets("MUDANï¿½AS").Cells(linha_tabeladespesa, 4).Value = APARELHO1.Value
     
 linha_four = Sheets("HISTORICO").Cells(1048476, 1).End(xlUp).Row + 1
 
@@ -190,7 +189,7 @@ GoTo fim
 
 Mensagem:
 
-MsgBox "    Existem inconsitências nas infomações preenchidas."
+MsgBox "    Existem inconsitï¿½ncias nas infomaï¿½ï¿½es preenchidas."
 
 fim:
 
@@ -252,7 +251,7 @@ Next
 
 
     If encontrou = False Then
-    MsgBox "    Nome não encontrado!"
+    MsgBox "    Nome nï¿½o encontrado!"
     EMAIL = ""
     SENHA = ""
     MATRICULA = ""
@@ -264,7 +263,7 @@ GoTo fim
 
 Mensagem:
 
-MsgBox "    O nome informado não é valido e/ou não existe. Tente novamente."
+MsgBox "    O nome informado nï¿½o ï¿½ valido e/ou nï¿½o existe. Tente novamente."
 
 fim:
 
@@ -276,7 +275,7 @@ fim:
 End Sub
 
 Private Sub CAIXA_CHAPA_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
- KeyAscii = SóNúmeros(KeyAscii)
+ KeyAscii = Sï¿½Nï¿½meros(KeyAscii)
 End Sub
 Private Sub CAIXA_PROFISSIONAL_ENTER()
 ultima_linha = Sheets("TABELA GERAL").Range("a3").End(xlDown).Row
@@ -290,13 +289,13 @@ Private Sub APARELHO1_ENTER()
 ultima_linha = Sheets("DADOS").Range("A2").End(xlDown).Row
 APARELHO1.RowSource = "DADOS!A2:A" & ultima_linha
 End Sub
-Private Function SóNúmeros(l As IReturnInteger)
+Private Function Sï¿½Nï¿½meros(l As IReturnInteger)
     Select Case l
         Case Asc("0") To Asc("9")
-            SóNúmeros = l
+            Sï¿½Nï¿½meros = l
         Case Else
-            SóNúmeros = 0
-            MsgBox "Favor inserir apenas números!", vbExclamation, "CAMPO TIPO NÚMERO"
+            Sï¿½Nï¿½meros = 0
+            MsgBox "Favor inserir apenas nï¿½meros!", vbExclamation, "CAMPO TIPO Nï¿½MERO"
     End Select
 End Function
 Private Sub UserForm_Initialize()
